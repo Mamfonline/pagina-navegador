@@ -1,0 +1,673 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Inicio</title>
+	
+<link href="https://fonts.googleapis.com/css?family=Fira+Sans:200,300,400,500,700&display=swap" rel="stylesheet">
+</head>
+<body>
+	<style type="text/css">
+	body{
+	margin: 0;
+	font-family: 'Fira Sans', sans-serif;
+	background-color: #2a2a2e;
+}
+html{
+   padding: 0;
+   padding-bottom: 30px;
+   margin: 0;
+   scroll-behavior: smooth;
+}
+	/* Tag para centralisar o conteúdo */
+	.wrap{
+		margin: 0 auto;
+		width: 1129px;
+	}
+	@media screen and (max-width: 990px){
+	.wrap{
+		margin: 0 auto;
+		width: auto;
+	}
+	}
+	.clear { clear: both; }
+	/* Menu Tab */
+	.tab{
+		background-color: #39383e;
+		border-bottom: 1px solid #0c0c0d;
+		width: 100%;
+		padding: 0;
+		margin: 0;
+		position: fixed;
+		box-shadow: 0 4px 16px rgba(12, 12, 13, 0.1);
+	}
+	.tab li{
+		list-style: none;
+	}
+	.tab ul{
+		padding: 0;
+		margin: 0;
+	}
+	.tab-item a{
+		float: left;
+		font-size: 16px;
+		text-decoration: none;
+		color: #fff;
+		padding: 14px;
+		border-bottom: 2px solid #39383e;
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.tab-item a:hover{
+		border-bottom: 2px solid #0984ff;
+		background-color: #4b4a4f;
+		color: #0984ff;
+	}
+	.tab-item a:active{
+		border-bottom: 2px solid #0984ff;
+		background-color: #5e5d62;
+		color: #0984ff;
+	}
+	.tab-item a:focus{
+		box-shadow: 0 0 0 2px #0a84ff, 0 0 0 6px rgba(10, 132, 255, 0.3);
+		border-bottom: 2px solid #39383e;
+		background-color: #39383e;
+		color: #0984ff;
+	}
+	.espaco{
+		height: 60px;
+	}
+	@media screen and (max-width: 990px){
+		.tab::after{
+			position: absolute;
+			top: 0;
+			right: 0;
+			display: block;
+			width: 100px;
+			height: 100%;
+			pointer-events: none;
+			content: "";
+			background: linear-gradient(90deg,
+			hsla(0,0%,100%,0) 0,#39383e 95%,#39383e);
+		}
+		.rolagem-vert{
+			position: relative;
+			cursor: -webkit-grab;
+			cursor: grab;
+			overflow-x: hidden;
+			overflow-y: hidden;
+			height: 49px;
+			margin: 0;
+		}
+		.rolagem-vert-container{
+			box-sizing: content-box;
+			display: -webkit-box;
+			display: flex;
+			overflow-x: scroll;
+			overflow-y: hidden;
+		}
+	}
+	/* Cartão de Links */
+	.cartao-section{
+		padding-top: 60px;
+	}
+	.cartao-section h1{
+		color: #fff;
+		font-weight: 300;
+		font-size: 22px;
+		margin: 0;
+		margin-left: 20px;
+	}
+	.post-horizontal-cartao{
+	width: 46%;
+	float: left;
+	border-radius: 4px;
+	background: #38383d;
+	margin: 20px;
+	box-shadow: 0 4px 16px rgba(12, 12, 13, 0.1);
+	z-index: 20;
+	-moz-transition: all 0.3s;
+	-webkit-transition: all 0.3s;
+	transition: all 0.3s;
+	}
+	.post-horizontal-cartao:hover{
+		outline: 5px solid #4a4a4f;
+		-moz-outline-radius: 4px;
+	}
+	.post-horizontal-cartao a:hover{
+		text-decoration: none;
+	}
+	.post-horizontal-cartao a:focus{
+		box-shadow: 0 0 0 0px #ff0039, 0 0 0 0px rgba(10, 132, 255, 0.3);
+	}
+	.post-horizontal-cartao img{
+		float: left;
+		width: 90px;
+		height: 100px;
+		background: linear-gradient(270deg, #ED213A, #93291E);
+		object-fit: cover;
+	    object-position: center;
+	    border-top-left-radius: 4px;
+		border-bottom-left-radius: 4px;
+	}
+	.post-horizontal-cartao-text{
+		float: left;
+		padding: 10px;
+		padding-top: 16px;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	.post-horizontal-cartao-text h1{
+		max-width: 190px;
+		font-size: 15px;
+		font-weight: 500;
+		margin: 0;
+		color: #fff;
+	}
+	.post-horizontal-cartao-text p{
+		font-size: 13px;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+	}
+	@media screen and (max-width: 990px){
+		.post-horizontal-cartao{
+		max-width: 340px;
+		width: 100%;
+		margin: 10px;
+	}
+	.post-horizontal-cartao img{
+		width: 90px;
+		height: 100px;
+	}
+	.post-horizontal-cartao-text h1{
+		max-width: 160px;
+	}
+	.cartao-section h1{
+		color: #fff;
+		font-weight: 300;
+		font-size: 22px;
+		margin: 0;
+		margin-left: 10px;
+	}
+	}
+	.cartao{
+		width: 242px;
+		float: left;
+		border-radius: 4px;
+		background: #38383d;
+		margin: 20px;
+		box-shadow: 0 1px 4px rgba(12, 12, 13, 0.1);
+		z-index: 20;
+		-moz-transition: all 0.3s;
+		-webkit-transition: all 0.3s;
+		transition: all 0.3s;
+	}
+	.cartao:hover{
+		outline: 5px solid #4a4a4f;
+		-moz-outline-radius: 4px;
+	}
+	.cartao a:hover{
+		text-decoration: none;
+	}
+	.cartao a:focus{
+		box-shadow: 0 0 0 0px #ff0039, 0 0 0 0px rgba(10, 132, 255, 0.3);
+	}
+	.cartao img{
+		width: 100%;
+		height: 150px;
+		background: linear-gradient(270deg, #ED213A, #93291E);
+		object-fit: cover;
+	    object-position: center;
+	    border-top-left-radius: 4px;
+		border-top-right-radius: 4px;
+	}
+	.cartao-text{
+		padding: 10px;
+		padding-right: 16px;
+		padding-left: 16px;
+	}
+	.cartao-text h1{
+		font-size: 17px;
+		font-weight: 500;
+		margin: 0;
+		color: #fff;
+	}
+	.cartao-text p{
+		font-size: 13px;
+		text-transform: uppercase;
+		color: #fff;
+		margin: 0;
+	}
+	@media screen and (max-width: 990px){
+		.cartao{
+		width: 155px;
+		margin: 10px;
+		float: none;
+		display: inline-block;
+        vertical-align: top;
+	}
+	.cartao img{
+		width: 100%;
+		height: 90px;
+	}
+	}
+	.atribuicao{
+		width: 100px;
+		padding-top: 20px;
+		margin: 0 auto;
+	}
+	.atribuicao p{
+		margin: 0;
+		font-size: 9px;
+		color: #fff;
+	}
+	.atribuicao img{
+		width: 100px;
+		height: 24px;
+	}
+</style>
+<div class="corpo">
+	<section class="tab">
+		<div class="wrap">
+		<ul>
+		<div class="rolagem-vert">
+		<div class="rolagem-vert-container">
+		<li class="tab-item"><a href="#video">Vídeo</a></li>
+		<li class="tab-item"><a href="#dev">Desenvolvimento</a></li>
+		<li class="tab-item"><a href="#linux">Linux</a></li>
+		<li class="tab-item"><a href="#tv">Televisão</a></li>
+		<li class="tab-item"><a href="#noticias">Notícias</a></li>
+		<li class="tab-item"><a href="#universidade">Universidade</a></li>
+		<li class="tab-item"><a href="#social">Redes Sociais e Utilitarios</a></li>
+		</div>
+		</div>
+		</ul>
+		<div class="clear"></div>
+	</div>
+	</section>
+	<div class="espaco"></div>
+	<div class="wrap">
+		<section class="cartao-mamf">
+			<div class="post-horizontal-cartao">
+			  <a href="https://mamf.com.br/">
+			  <img src="https://mamf.com.br/wp-content/uploads/2019/06/cropped-icon-512-192x192.png">
+			  <div class="post-horizontal-cartao-text">
+			  <h1>Mamfonline</h1>
+			    <p>Site pessoal</p>
+			  </div>
+			  </a>
+			</div>
+			<div class="post-horizontal-cartao">
+			  <a href="https://mamf.com.br/wp-login.php?redirect_to=https%3A%2F%2Fmamf.com.br%2Fwp-admin%2F&reauth=1">
+			  <img src="https://miro.medium.com/max/9184/1*0st-KoC_Ehw_3Vl6Bse2wA.jpeg">
+			  <div class="post-horizontal-cartao-text">
+			  <h1>Criar Post</h1>
+			    <p>Escrever post para o Mamfonline</p>
+			  </div>
+			  </a>
+			</div>
+		</section>
+		<div class="clear"></div>
+			<section id="noticias" class="cartao-section">
+				<h1>Notícias & Mais</h1>
+			<div class="cartao">
+				<a href="https://www.bbc.com/portuguese">
+				<img src="https://news.files.bbci.co.uk/ws/img/logos/og/brasil.png">
+				<div class="cartao-text">
+				<h1>BBC Brasil</h1>
+				<p>Serviço brasileiro da BBC</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://www.tnh1.com.br/">
+				<img src="https://www.tnh1.com.br/fileadmin/_processed_/f/d/csm_e4EmGCBA_4db0893ad0.jpeg">
+				<div class="cartao-text">
+				<h1>TNH1</h1>
+				<p>Notícias de Alagoas</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://tvcultura.com.br/">
+				<img src="https://tvcultura.com.br/_img/tvcultura/programas_abertura_TV.jpg">
+				<div class="cartao-text">
+				<h1>TV Cultura</h1>
+				<p>Portal da TV Cultura</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://diplomatique.org.br/">
+				<img src="https://i.ytimg.com/vi/y0lQ1g_wSmg/maxresdefault.jpg">
+				<div class="cartao-text">
+				<h1>Diplomatique</h1>
+				<p>Le Monde Diplomatique</p>
+				</div>
+				</a>
+			</div>
+			</section>
+		<div class="clear"></div>
+			<section id="video" class="cartao-section">
+				<h1>Streaming de Vídeo</h1>
+			<div class="cartao">
+				<a href="https://www.netflix.com/browse">
+				<img src="https://img.olhardigital.com.br/uploads/acervo_imagens/2019/04/r16x9/20190401074428_1200_675_-_netflix.jpg">
+				<div class="cartao-text">
+				<h1>Netflix</h1>
+				<p>Séries, Filmes de Documentários</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://youtube.com/">
+				<img src="https://www.youtube.com/yts/img/yt_1200-vflhSIVnY.png">
+				<div class="cartao-text">
+				<h1>YouTube</h1>
+				<p>Streaming de Vídeo do Google</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://tvescola.org.br/">
+				<img src="https://3.bp.blogspot.com/-7RytsKHgk7w/W7ZSczl-F2I/AAAAAAAA6II/yyXHLvG-9NA0MtO-0um0CQasFADepTbGwCLcBGAs/s1600/tv%2Besc.png">
+				<div class="cartao-text">
+				<h1>TV Escola</h1>
+				<p>Séries, Filmes e Documentários</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://play.ebc.com.br/">
+				<img src="https://lh3.googleusercontent.com/MucIHespoYICgX_guS4oWaV044veWObjYxdRyq_kKAzxFPIcSBpT6pJaum--Tgzsig">
+				<div class="cartao-text">
+				<h1>EBC Play</h1>
+				<p>Séries, Filmes e Documentários</p>
+				</div>
+				</a>
+			</div>
+			</section>
+			<div class="clear"></div>
+			<section id="universidade" class="cartao-section">
+				<h1>Universidade</h1>
+			<div class="cartao">
+				<a href="http://academico.uneal.edu.br/miolo26/html/login_portal/">
+				<img src="http://www.uneal.edu.br/configuracao/imagens/lateral/sistema-academico-professor-estudante.jpg/image_preview">
+				<div class="cartao-text">
+				<h1>Portal Acadêmico</h1>
+				<p>Colsultar boletim</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://uneal.edu.br/">
+				<img src="http://www.uneal.edu.br/configuracao/imagens/internas/campuspalmeira.jpg">
+				<div class="cartao-text">
+				<h1>Portal UNEAL</h1>
+				<p>Site da UNEAL</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://lattes.cnpq.br/">
+				<img src="https://s2.glbimg.com/afEWq3DsTIWSiW_EFvqMyVgJUFw=/0x0:1500x708/984x0/smart/filters:strip_icc()/i.s3.glbimg.com/v1/AUTH_08fbf48bc0524877943fe86e43087e7a/internal_photos/bs/2018/A/s/GjHRVLRNAf1TqEVURhpg/plataforma-lattes.jpg">
+				<div class="cartao-text">
+				<h1>PLataforma LATTES</h1>
+				<p>Plataforma de curriculo acadêmico</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://freire.capes.gov.br">
+				<img src="https://www.ouricuriemfoco.com.br/wp-content/uploads/2018/01/Plataforma-Freire.jpg">
+				<div class="cartao-text">
+				<h1>PLataforma Freire</h1>
+				<p>Plataforma de curriculo professor</p>
+				</div>
+				</a>
+			</div>
+			</section>
+			<div class="clear"></div>
+			<section id="tv" class="cartao-section">
+				<h1>Televisão</h1>
+			<div class="cartao">
+				<a href="http://lineup.tv.br/">
+				<img src="http://www.lineup.tv.br/images/lineup.gif">
+				<div class="cartao-text">
+				<h1>LineUP</h1>
+				<p>Relação de Canais de TV</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://www.htforum.com">
+				<img src="https://www.htforum.com/images/htforum.fb.jpg">
+				<div class="cartao-text">
+				<h1>HT Forum</h1>
+				<p>Forum sobre TV</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://sistemas.anatel.gov.br/se/public/view/b/srd.php">
+				<img src="http://informa.blob.core.windows.net/noticias/mosaico.jpg">
+				<div class="cartao-text">
+				<h1>Mosaico ANATEL</h1>
+				<p>Consulta a concessões de TV</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://www.infotvrj.com/">
+				<img src="https://3.bp.blogspot.com/-F7VZhgynhCk/XGr_-An70WI/AAAAAAABGS4/jQD54vOW7yQ-_pAErg4IZcoOUnaaIxwogCLcBGAs/s640/SOBRE.png">
+				<div class="cartao-text">
+				<h1>Info TV.RJ</h1>
+				<p>Blog sobre TV no RJ</p>
+				</div>
+				</a>
+			</div>
+			</section>
+			<div class="clear"></div>
+			<section id="linux" class="cartao-section">
+				<h1>Linux</h1>
+			<div class="cartao">
+				<a href="https://www.diolinux.com.br/">
+				<img src="https://1.bp.blogspot.com/-cBhIAIs0nzs/XJvCNjGGdlI/AAAAAAAArIw/5NcKiDYdf6w-Ay_TABMC_DpOFvGmwzIgQCLcBGAs/s640/diolinux%2Blogo.jpg">
+				<div class="cartao-text">
+				<h1>Diolinux</h1>
+				<p>Blog sobre Linux</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://plus.diolinux.com.br/">
+				<img src="https://plus.diolinux.com.br/uploads/default/original/2X/4/48b4a006acfd95353e3f7db2ac8c93f69925ce49.png">
+				<div class="cartao-text">
+				<h1>Diolinux PLUS</h1>
+				<p>Forum sobre Linux</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://manjarobrasil.wordpress.com/comandos-basicos/">
+				<img src="https://www.lucascaton.com.br/assets/images/2017/12/terminal.png">
+				<div class="cartao-text">
+				<h1>Comandos Terminal</h1>
+				<p>Comandos básicos para terminal Manjaro</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://flathub.org/apps">
+				<img src="https://fedoramagazine.org/wp-content/uploads/2018/03/flathub-945x400.png">
+				<div class="cartao-text">
+				<h1>Aplicativos</h1>
+				<p>Loja de apps FLATHUB</p>
+				</div>
+				</a>
+			</div>
+			</section>
+			<div class="clear"></div>
+			<section id="dev" class="cartao-section">
+				<h1>Desenvolvimento</h1>
+			<div class="cartao">
+				<a href="http://localhost/wordpress/">
+				<img src="https://kinsta.com/pt/wp-content/uploads/sites/3/2019/07/o-que-e-o-localhost.png">
+				<div class="cartao-text">
+				<h1>LocalHOST</h1>
+				<p>Site BETA local</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://material.io/tools/color/#!/?view.left=0&view.right=1&primary.color=EC407A">
+				<img src="https://gizmodo.uol.com.br/wp-content/blogs.dir/8/files/2014/06/784014790032582570.png">
+				<div class="cartao-text">
+				<h1>Paleta de Cores</h1>
+				<p>Material DEsign</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://fonts.google.com/">
+				<img src="https://www.gstatic.com/images/icons/material/apps/fonts/1x/opengraph_color_1200dp.png">
+				<div class="cartao-text">
+				<h1>Google Fontes</h1>
+				<p>Fontes WEB do Google</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://www.lonniebest.com/FormatCSS/">
+				<img src="https://arquivo.devmedia.com.br/marketing/img/guia-css-38149.png">
+				<div class="cartao-text">
+				<h1>Formatar CSS</h1>
+				<p>Serviço para formatação de CSS</p>
+				</div>
+				</a>
+			</div>
+			</section>
+			<div class="clear"></div>
+			<section id="social" class="cartao-section">
+				<h1>Utilitarios e Redes Sociais</h1>
+			<div class="cartao">
+				<a href="https://www.instagram.com/">
+				<img src="http://s2.glbimg.com/3sfuZiC5CGOQHoppAVgRpW3GHXE=/s.glbimg.com/jo/g1/f/original/2016/05/11/instagram-logo-g1.jpg">
+				<div class="cartao-text">
+				<h1>Instagram</h1>
+				<p>Rede Social de Imagens</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://letterboxd.com/">
+				<img src="https://s.ltrbxd.com/static/img/default-share.353d0414.png">
+				<div class="cartao-text">
+				<h1>Letterboxd</h1>
+				<p>Rede social de Filmes</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://translate.google.com/">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Google_Translate_logo.svg/1200px-Google_Translate_logo.svg.png">
+				<div class="cartao-text">
+				<h1>Tradutor</h1>
+				<p>Google Tradutor</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://mail.google.com/mail/u/0/#inbox">
+				<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/45/New_Logo_Gmail.svg/1200px-New_Logo_Gmail.svg.png">
+				<div class="cartao-text">
+				<h1>GMail</h1>
+				<p>Emails</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://webmail.mamf.com.br/">
+				<img src="https://ecommercedesucesso.com.br/wp-content/uploads/2018/02/Como-criar-um-email-personalizado-1.png">
+				<div class="cartao-text">
+				<h1>Email Mamf</h1>
+				<p>Emails</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="http://lelivros.love/">
+				<img src="http://mundocoachingbrasil.com.br/wp-content/uploads/2017/06/livros.jpg">
+				<div class="cartao-text">
+				<h1>Lelivros</h1>
+				<p>Site de livros</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://aminoapps.com/c/m-arte/home/">
+				<img src="http://cm1.narvii.com/7224/75ef0c7923b1e060ca05505c87fdf7b92d204b69_00.jpg">
+				<div class="cartao-text">
+				<h1>M(arte)</h1>
+				<p>Rede Social de Arte</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://fascinartion.com/index.php?r=user%2Fauth%2Flogin">
+				<img src="https://fascinartion.com/themes/MarteLobo/ico/android-icon-192x192.png">
+				<div class="cartao-text">
+				<h1>FascinARTion</h1>
+				<p>Rede Social de Arte</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://pixabay.com/">
+				<img src="https://pixabay.com/static/img/logo_square.png">
+				<div class="cartao-text">
+				<h1>Pixabay</h1>
+				<p>Site para busca de Imagens</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://docero.com.br/">
+				<img src="https://static.docero.com.br/static/img/icons/splashscreens/iphone5_splash.png">
+				<div class="cartao-text">
+				<h1>Docero</h1>
+				<p>Site de Livros</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://www.deviantart.com/">
+				<img src="https://st.deviantart.net/minish/main/logo/card_black_large.png">
+				<div class="cartao-text">
+				<h1>DeviantART</h1>
+				<p>Rede Social de Arte</p>
+				</div>
+				</a>
+			</div>
+			<div class="cartao">
+				<a href="https://github.com/">
+				<img src="https://github.githubassets.com/images/modules/open_graph/github-octocat.png">
+				<div class="cartao-text">
+				<h1>GitHub</h1>
+				<p>Rede Social para desenvolvedores</p>
+				</div>
+				</a>
+			</div>
+			</section>
+	</div>
+</div>
+<div class="clear"></div>
+<footer>
+	<div class="atribuicao">
+	<p>Desenvolvido por</p>
+	<a href="https://mamf.com.br/"><img src="https://mamf.com.br/wp-content/themes/mamf-lobo/assets/img/logo-mamf-e-cinza-claro.png"></a>
+	</div>
+</footer>
+</body>
+</html>
